@@ -7,7 +7,7 @@ void main(){
   //For In Loop
   var students = ["Eustache", "Mary", "John", "Jared", "Rosette"];
   for(var student in students){
-    // print(student);
+    print(student);
   }
 
   //While Loop
