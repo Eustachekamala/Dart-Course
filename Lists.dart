@@ -26,4 +26,34 @@ void main(){
 
   //print
   print(students);
+
+  List<int> scores = [50, 59, 75, 78,2,4,5,6,78];
+  var target = 78;
+  var index = binarySearch(scores, target);
+  
+  if(index != -1){
+    print("Element found at index $index");
+  } else {
+    print("Element not found");
+  }
+
+}
+
+binarySearch(List<int> scores, int target) {
+  var low = 0;
+  var high = scores.length - 1;
+
+  //loop
+  while(low <= high){
+    var mid = ((low + high) / 2).floor();
+
+    if(target == scores[mid]){
+      return mid;
+    } else if(target < scores[mid]){
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return - 1;
 }
