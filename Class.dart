@@ -27,4 +27,13 @@ class Pizza extends MenuItem{
       print("$topping");
     }
   }
+
+  @override
+  String format() {
+    var formattedToppings = 'Contains: ';
+    for(final t in toppings){
+      formattedToppings = '$formattedToppings $t';
+    }
+    return '$title --> $price \n$formattedToppings';
+  }
 }
