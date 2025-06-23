@@ -4,7 +4,6 @@ void main(){
   var roast = MenuItem("veggie roast dinner", 12.99);
   var kebab = MenuItem('plant kebab', 7.49);
   print(noodles.format());
-  pizza.showData();
   print(pizza.format());
 
   var foods = Collection<MenuItem>(
@@ -48,13 +47,13 @@ class Pizza extends MenuItem{
   }
 }
 
-class Collection {
+class Collection<T> {
   String? name;
   List? data;
   //Constructor
   Collection(this.name, this.data);
 
-  randomItem(){
+  T randomItem(){
     data?.shuffle();
 
     return data?[0];
