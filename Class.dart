@@ -6,6 +6,14 @@ void main(){
   print(noodles.format());
   pizza.showData();
   print(pizza.format());
+
+  var foods = Collection(
+    'Menu Items',
+    [noodles, pizza, roast, kebab]
+  );
+
+  var random = foods.randomItem();
+  print(random);
 }
 
 class MenuItem{
