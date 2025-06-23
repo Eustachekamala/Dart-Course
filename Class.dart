@@ -7,7 +7,7 @@ void main(){
   pizza.showData();
   print(pizza.format());
 
-  var foods = Collection(
+  var foods = Collection<MenuItem>(
     'Menu Items',
     [noodles, pizza, roast, kebab]
   );
