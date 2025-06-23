@@ -1,6 +1,8 @@
 void main(){
   var noodles = MenuItem("Volcano", 19.99);
   var pizza = Pizza(['mushrooms', "peppers"], "Veg volcano", 19.99);
+  var roast = MenuItem("veggie roast dinner", 12.99);
+  var kebab = MenuItem('plant kebab', 7.49);
   print(noodles.format());
   pizza.showData();
   print(pizza.format());
